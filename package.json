@@ -2,7 +2,7 @@
   "name": "titan-vault-homepage",
   "version": "0.1.0",
   "private": true,
-  "description": "Landing page oficial de titan-vault (SecuryBlack)",
+  "description": "Official landing page for titan-vault (SecuryBlack)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
