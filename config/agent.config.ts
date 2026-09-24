@@ -659,7 +659,7 @@ export const titanVaultConfig: AgentConfig = {
   binaryName: "titanvault",
   productTitle: "TitanVault — Resilient Multi-Cloud Backup Agent",
   badge: "Rust Native · Open Source · Apache 2.0",
-  version: "v0.1.0",
+  version: "v0.1.2",
   tagline: "High-Performance Streaming Backups & Disaster Recovery",
   description:
     "Zero intermediate disk storage. Streams database dumps, compresses with zstd, encrypts at source with ChaCha20-Poly1305, and syncs directly to Cloudflare R2, Hetzner, and Google Drive with an interactive TUI.",
