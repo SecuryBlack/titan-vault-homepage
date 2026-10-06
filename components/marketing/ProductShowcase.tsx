@@ -142,7 +142,7 @@ export function ProductShowcase() {
       { id: 0, label: "1. Sources (DB & Files)", icon: Layers },
       { id: 1, label: "2. Targets (R2/S3/Drive)", icon: HardDrive },
       { id: 2, label: "3. Policy & Crypto", icon: Shield },
-      { id: 3, label: "4. Snapshots & Restore", icon: Clock },
+      { id: 3, label: "4. Snapshots", icon: Clock },
     ];
   };
 
@@ -684,7 +684,7 @@ export function ProductShowcase() {
                           Nonce: <span className="text-white font-bold">96-bit CSPRNG per snapshot</span>
                         </div>
                         <div>
-                          Integrity: <span className="text-white font-bold">Poly1305 MAC validated on restore</span>
+                          Integrity: <span className="text-white font-bold">Poly1305 authentication tag</span>
                         </div>
                       </div>
                     </div>

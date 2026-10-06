@@ -94,7 +94,7 @@ export const ecosystemAgents: EcosystemAgent[] = [
   {
     id: "titanvault",
     name: "TitanVault",
-    role: "Backups & Disaster Recovery",
+    role: "Backup Management",
     tagline: "Stream database dumps directly to cloud storage with zero intermediate disk usage and ChaCha20 encryption.",
     url: "https://titanvault.dev",
     githubUrl: "https://github.com/securyblack/titan-vault",
@@ -651,7 +651,7 @@ export const cromoForgeConfig: AgentConfig = {
 };
 
 /* ==========================================================================
-   PRESET: TitanVault (Titanium / Cyan) — Backup & Disaster Recovery
+   PRESET: TitanVault (Titanium / Cyan) — Backup Management
    ========================================================================== */
 export const titanVaultConfig: AgentConfig = {
   id: "titan-vault",
@@ -660,7 +660,7 @@ export const titanVaultConfig: AgentConfig = {
   productTitle: "TitanVault — Resilient Multi-Cloud Backup Agent",
   badge: "Rust Native · Open Source · Apache 2.0",
   version: "v0.1.2",
-  tagline: "High-Performance Streaming Backups & Disaster Recovery",
+  tagline: "High-Performance Streaming Backups",
   description:
     "Zero intermediate disk storage. Streams database dumps, compresses with zstd, encrypts at source with ChaCha20-Poly1305, and syncs directly to Cloudflare R2, Hetzner, and Google Drive with an interactive TUI.",
   theme: {
@@ -717,7 +717,7 @@ export const titanVaultConfig: AgentConfig = {
       title: "Standalone TUI (Ratatui)",
       subtitle: "Zero Lock-in",
       description:
-        "Configure data sources, test S3 endpoints with <T>, explore snapshots, and trigger restores with <R> without requiring a cloud account.",
+        "Configure data sources, test S3 endpoints with <T>, and explore snapshots without requiring a cloud account.",
       colSpan: "col-span-1",
       tag: "Experience",
     },
