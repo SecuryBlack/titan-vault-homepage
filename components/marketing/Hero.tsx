@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { activeAgentConfig } from "@/config/agent.config";
 import { Badge } from "@/components/catalyst/badge";
+import { track } from "@/lib/analytics";
 import { ProductShowcase } from "./ProductShowcase";
 import { Copy, Check, Terminal as TerminalIcon, Sparkles } from "lucide-react";
 
@@ -14,6 +15,7 @@ export function Hero() {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(activeCommand.cmd);
+    track("install_command_copy", { os: activeCommand.os.toLowerCase() });
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
