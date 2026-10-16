@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { activeAgentConfig } from "@/config/agent.config";
 import { Badge } from "@/components/catalyst/badge";
 import { track } from "@/lib/analytics";
-import { ProductShowcase } from "./ProductShowcase";
 import { Copy, Check, Terminal as TerminalIcon, Sparkles } from "lucide-react";
 
 export function Hero() {
@@ -86,9 +85,14 @@ export function Hero() {
                   </button>
                 ))}
               </div>
-              <span className="text-[11px] text-zinc-400 font-mono hidden sm:inline">
-                Zero external dependencies
-              </span>
+              <a
+                href="https://github.com/securyblack/titan-vault/blob/master/scripts/install.sh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] text-zinc-400 hover:text-zinc-200 font-mono hidden sm:inline"
+              >
+                Read the script first
+              </a>
             </div>
 
             {/* Code Line */}
@@ -112,8 +116,38 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Interactive Product Showcase (TUI Simulator) */}
-        <ProductShowcase />
+        {/* Real config: the same keys as /etc/titanvault/config.toml */}
+        <div className="w-full max-w-3xl mt-10 text-left">
+          <div className="text-xs text-zinc-500 dark:text-zinc-400 mb-2">
+            Example /etc/titanvault/config.toml (trimmed)
+          </div>
+          <pre className="rounded-xl border border-zinc-300/80 dark:border-zinc-800 bg-zinc-950 text-zinc-200 p-4 text-[11px] sm:text-xs font-mono overflow-x-auto leading-relaxed">
+{`[schedule]
+cron = "0 2 * * *"
+
+[crypto]
+enabled = true
+passphrase = "a-long-random-passphrase"
+
+[[sources.databases]]
+name = "app-postgres"
+driver = "postgres"
+container_name = "postgres"
+database = "app"
+user = "postgres"
+
+[[sources.filesystems]]
+name = "app-configs"
+paths = ["/opt/stack"]
+excludes = ["**/data/**"]
+
+[targets.cloudflare_r2]
+endpoint = "https://<account_id>.r2.cloudflarestorage.com"
+bucket = "prod-backups"
+access_key = "..."
+secret_key = "..."`}
+          </pre>
+        </div>
       </div>
     </section>
   );
