@@ -95,7 +95,7 @@ export const ecosystemAgents: EcosystemAgent[] = [
     id: "titanvault",
     name: "TitanVault",
     role: "Backups",
-    tagline: "Scheduled backups for databases and configuration.",
+    tagline: "Scheduled PostgreSQL and file backups to S3-compatible storage.",
     url: "https://titanvault.dev",
     githubUrl: "https://github.com/securyblack/titan-vault",
     color: "#06B6D4",
@@ -202,7 +202,7 @@ export const titanVaultConfig: AgentConfig = {
   comparisonRows: [
     {
       feature: "Restore",
-      agent: "No supported restore workflow yet",
+      agent: "CLI restore to a new path (files or SQL export); no restore from the panel yet",
       bashScript: "Whatever you write",
       competitors: "Built-in restore command",
     },
@@ -240,7 +240,7 @@ export const titanVaultConfig: AgentConfig = {
     {
       question: "Can TitanVault restore my backups?",
       answer:
-        "Not as a supported, tested workflow yet. Creating a backup does not prove it can be recovered, so test recovery from your storage yourself before you rely on it.",
+        "Yes, from the CLI: titanvault restore brings a snapshot back to a new path, as files or as a SQL export you load yourself. It never overwrites an existing destination. There is no restore from the panel yet, and creating a backup does not prove it can be recovered, so test a restore before you rely on it.",
     },
     {
       question: "Which storage does it support?",
