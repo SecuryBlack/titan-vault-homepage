@@ -131,7 +131,7 @@ export const titanVaultConfig: AgentConfig = {
   binaryName: "titanvault",
   productTitle: "TitanVault — Encrypted backup agent for servers",
   badge: "Rust Native · Open Source · Apache 2.0",
-  version: "v0.2.3",
+  version: "v0.3.0",
   tagline: "Scheduled, encrypted backups to object storage",
   description:
     "Backs up PostgreSQL databases and directories as zstd-compressed archives, optionally encrypted on the host with ChaCha20-Poly1305, to Hetzner Object Storage, Cloudflare R2, any S3-compatible bucket or a local path. Cron schedules, GFS retention and a terminal UI.",
@@ -202,7 +202,7 @@ export const titanVaultConfig: AgentConfig = {
   comparisonRows: [
     {
       feature: "Restore",
-      agent: "CLI restore to a new path (files or SQL export); no restore from the panel yet",
+      agent: "To a new path (files or SQL export), from the CLI or the SecuryBlack panel",
       bashScript: "Whatever you write",
       competitors: "Built-in restore command",
     },
@@ -240,7 +240,7 @@ export const titanVaultConfig: AgentConfig = {
     {
       question: "Can TitanVault restore my backups?",
       answer:
-        "Yes, from the CLI: titanvault restore brings a snapshot back to a new path, as files or as a SQL export you load yourself. It never overwrites an existing destination. There is no restore from the panel yet, and creating a backup does not prove it can be recovered, so test a restore before you rely on it.",
+        "Yes. titanvault restore, or the Restore button in the SecuryBlack panel, brings a snapshot back to a new path on the server, as files or as a SQL export you load yourself. It never overwrites an existing destination. Creating a backup does not prove it can be recovered, so test a restore before you rely on it.",
     },
     {
       question: "Which storage does it support?",
