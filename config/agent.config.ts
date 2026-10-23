@@ -131,7 +131,7 @@ export const titanVaultConfig: AgentConfig = {
   binaryName: "titanvault",
   productTitle: "TitanVault — Encrypted backup agent for servers",
   badge: "Rust Native · Open Source · Apache 2.0",
-  version: "v0.3.0",
+  version: "v0.3.1",
   tagline: "Scheduled, encrypted backups to object storage",
   description:
     "Backs up PostgreSQL databases and directories as zstd-compressed archives, optionally encrypted on the host with ChaCha20-Poly1305, to Hetzner Object Storage, Cloudflare R2, any S3-compatible bucket or a local path. Cron schedules, GFS retention and a terminal UI.",
